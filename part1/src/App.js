@@ -18,19 +18,47 @@
 
 // -----Múltiplos componentes-----
 
-const Hello = () => {
+// const Hello = () => {
+//   return (
+//     <div>
+//       <p>Olá, mundo!</p>
+//     </div>
+//   )
+// }
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Olá a todos!</h1>
+//       <Hello />
+//     </div>
+//   )
+// }
+
+// export default App;
+
+const Hello = (props) => {
+
+  console.log(props)
   return (
     <div>
-      <p>Olá, mundo!</p>
+      <p>
+        Olá {props.nome}, você tem {props.idade} anos
+      </p>
     </div>
   )
 }
 
 const App = () => {
+
+  const nome = 'Peter'
+  const idade = 10
+
   return (
     <div>
       <h1>Olá a todos!</h1>
-      <Hello />
+      <Hello nome='Maya' idade={26 + 10} />
+      <Hello nome={nome} idade={idade} />
     </div>
   )
 }
