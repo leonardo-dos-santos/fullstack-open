@@ -41,6 +41,31 @@
 //   )
 // }
 
+// Exercise 1.10
+// import StatisticLine from '../StatisticLine/StatisticLine'
+
+// const Statistics = ({ good, neutral, bad }) => {
+//   const total = good + neutral + bad
+
+//   if (total === 0) {
+//     return <p>No feedback given</p>
+//   }
+
+//   const average = (good - bad) / total
+//   const positivePercentage = (good / total) * 100
+
+//   return (
+//     <div>
+//       <StatisticLine text="Good" value={good} />
+//       <StatisticLine text="Neutral" value={neutral} />
+//       <StatisticLine text="Bad" value={bad} />
+//       <StatisticLine text="Total" value={total} />
+//       <StatisticLine text="Average" value={average.toFixed(2)} />
+//       <StatisticLine text="Positive" value={`${positivePercentage.toFixed(1)}%`} />
+//     </div>
+//   )
+// }
+
 import StatisticLine from '../StatisticLine/StatisticLine'
 
 const Statistics = ({ good, neutral, bad }) => {
@@ -54,14 +79,16 @@ const Statistics = ({ good, neutral, bad }) => {
   const positivePercentage = (good / total) * 100
 
   return (
-    <div>
-      <StatisticLine text="Good" value={good} />
-      <StatisticLine text="Neutral" value={neutral} />
-      <StatisticLine text="Bad" value={bad} />
-      <StatisticLine text="Total" value={total} />
-      <StatisticLine text="Average" value={average.toFixed(2)} />
-      <StatisticLine text="Positive" value={`${positivePercentage.toFixed(1)}%`} />
-    </div>
+    <table>
+      <tbody>
+        <StatisticLine text="Good" value={good} />
+        <StatisticLine text="Neutral" value={neutral} />
+        <StatisticLine text="Bad" value={bad} />
+        <StatisticLine text="Total" value={total} />
+        <StatisticLine text="Average" value={average.toFixed(2)} />
+        <StatisticLine text="Positive" value={`${positivePercentage.toFixed(1)}%`} />
+      </tbody>
+    </table>
   )
 }
 
