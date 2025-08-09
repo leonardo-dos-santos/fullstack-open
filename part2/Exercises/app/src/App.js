@@ -1,5 +1,5 @@
 // Escolha o exercício aqui:
-import Step21 from "./exercises/step2.1/App";
+import Step21 from "./exercises/step2.2/App";
 
 const App = () => {
   return (
