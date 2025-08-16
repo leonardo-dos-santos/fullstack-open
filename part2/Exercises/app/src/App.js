@@ -1,10 +1,10 @@
 // Escolha o exercício aqui:
-import Step26 from "./exercises/step2.6/App";
+import Step27 from "./exercises/step2.7/App";
 
 const App = () => {
   return (
     <div>
-      <Step26 />
+      <Step27 />
     </div>
   );
 };
