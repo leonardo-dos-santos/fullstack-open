@@ -2,6 +2,7 @@ const Person = ({ person }) => (
   <li>{person.name} — {person.number}</li>
 )
 
+
 const Persons = ({ personsToShow }) => (
   <ul>
     {personsToShow.map(person => 
@@ -10,4 +11,4 @@ const Persons = ({ personsToShow }) => (
   </ul>
 )
 
-export default { Person, Persons }
+export default Persons
